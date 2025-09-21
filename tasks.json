@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "id": "job-1",
+      "user": "alice",
+      "schedule": "0 5 * * * *",
+      "command": "echo \"hello from job1\" >> job1.log",
+      "timeout_seconds": 300,
+      "concurrency_group": "default"
+    },
+    {
+      "id": "job-2",
+      "user": "bob",
+      "schedule": "*/15 * * * * *",
+      "command": "python3 do_something.py",
+      "timeout_seconds": 600,
+      "concurrency_group": "heavy-tasks"
+    }
+  ]
+}
